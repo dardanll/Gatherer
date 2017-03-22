@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
     @action = CreatesProject.new(
       name: params[:project][:name],
       task_string: params[:project][:tasks])
-    success = @action.build
+    success = @action.create
     if success
       redirect_to projects_path
     else
